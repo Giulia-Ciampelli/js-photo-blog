@@ -16,7 +16,7 @@ console.log('im alive');
 
 // #region variabili
 let rowElement = document.querySelector('.row');
-console.log(rowElement);
+let cardElements = '';
 
 // #endregion variabili
 
@@ -24,18 +24,14 @@ console.log(rowElement);
 axios.get("https://jsonplaceholder.typicode.com/photos?_limit=6")
     .then(response => {
         let cards = response.data;
-        console.log(cards);
 
-        // assicurati di svuotare gli elementi all'inizio
-
-        // foreach? per ciascun post
         cards.forEach(card => {
 
-            // destruttura il post per trovare le proprietà da assegnare ai pezzi del markup
+            // destrutturazione card
             const { title, url } = card;
             console.log(card);
 
-            // crea il markup
+            // creazione markup
             const markup = `
                 <div class="card">
                     <img src="./assets/img/pin.svg" class="pin" alt="">
@@ -53,9 +49,9 @@ axios.get("https://jsonplaceholder.typicode.com/photos?_limit=6")
                     </div>
                 </div>`
 
-            // appendilo all'elemento giusto (.row)
-
-            // stampalo
+            // assegnazione e stampa markup
+            cardElements += markup;
+            rowElement.innerHTML = cardElements;
         })
 
     })
