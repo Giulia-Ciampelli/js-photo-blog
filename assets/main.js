@@ -13,3 +13,10 @@ console.log('im alive');
 // rendi la pagina responsive, in modo che su mobile e tablet le foto si dispongano man mano una sotto l’altra ed il titolo abbia una dimensione adeguata
 
 // si possono sfruttare title: (su card body) e url: (su card title)
+
+// chiamata test
+axios.get("https://jsonplaceholder.typicode.com/photos?_limit=6")
+.then (response => {
+    console.log(response.data);
+})
+.catch (err => console.error(err))
