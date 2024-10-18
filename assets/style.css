@@ -38,6 +38,7 @@ main {
             background-color: #ffffff;
             width: calc((100% /12) * 3);
             position: relative;
+            box-shadow: #363636 2px 4px 8px;
 
             img.pin {
                 position: absolute;
