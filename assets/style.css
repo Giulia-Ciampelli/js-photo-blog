@@ -1,11 +1,10 @@
+/* #region common */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Edu TAS Beginner", cursive;
 }
-
-/* #region common */
 /* #endregion common */
 
 /* #region header */
@@ -21,4 +20,10 @@ header {
 /* #endregion header */
 
 /* #region main */
+main {
+    background-image: url(./img/cork.png);
+    
+    /* RICORDA: dopo potrebbe non aver senso */
+    height: 100vh;
+}
 /* #endregion main */
