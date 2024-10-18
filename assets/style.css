@@ -8,12 +8,16 @@
 
 body {
     background-image: url(./img/cork.png);
+    background-size: 300px;
+    background-repeat: repeat;
 }
 /* #endregion common */
 
 /* #region header */
 header {
     background-image: url(./img/wall.png);
+    background-size: 300px;
+    background-repeat: repeat;
 
     h1 {
         text-align: center;
