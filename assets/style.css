@@ -5,6 +5,10 @@
     box-sizing: border-box;
     font-family: "Edu TAS Beginner", cursive;
 }
+
+body {
+    background-image: url(./img/cork.png);
+}
 /* #endregion common */
 
 /* #region header */
@@ -21,10 +25,6 @@ header {
 
 /* #region main */
 main {
-    background-image: url(./img/cork.png);
-    
-    /* RICORDA: dopo potrebbe non aver senso */
-    height: 100vh;
 
     .row {
         display: flex;
@@ -32,15 +32,26 @@ main {
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
+        padding: 3rem;
 
         .card {
             background-color: #ffffff;
             width: calc((100% /12) * 4);
 
             .card-title {
-                
+                padding: 1.5rem 1.5rem 0 1.5rem;
+                text-align: center;
+
                 img {
-                    width: 90%;
+                    width: 100%;
+                }
+            }
+
+            .card-body {
+                padding: 1.5rem;
+
+                p {
+
                 }
             }
         }
