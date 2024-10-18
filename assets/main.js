@@ -12,7 +12,7 @@ console.log('im alive');
 // Bonus
 // rendi la pagina responsive, in modo che su mobile e tablet le foto si dispongano man mano una sotto l’altra ed il titolo abbia una dimensione adeguata
 
-// si possono sfruttare title: (su card img) e url: (su card desc)
+// si possono sfruttare title: (su card desc) e url: (su card img)
 
 // #region variabili
 let rowElement = document.querySelector('.row');
@@ -22,23 +22,41 @@ console.log(rowElement);
 
 // chiamata
 axios.get("https://jsonplaceholder.typicode.com/photos?_limit=6")
-.then (response => {
-    let cards = response.data;
-    console.log(cards);
-    
-    // assicurati di svuotare gli elementi all'inizio
-    
-    // foreach? per ciascun post
-    cards.forEach (card => {
-        
-        // destruttura il post per trovare le proprietà da assegnare ai pezzi del markup
-        
-        // crea il markup
-        
-        // appendilo all'elemento giusto (.row)
-        
-        // stampalo
-    })
+    .then(response => {
+        let cards = response.data;
+        console.log(cards);
 
-})
-.catch (err => console.error(err))
+        // assicurati di svuotare gli elementi all'inizio
+
+        // foreach? per ciascun post
+        cards.forEach(card => {
+
+            // destruttura il post per trovare le proprietà da assegnare ai pezzi del markup
+            const { title, url } = card;
+            console.log(card);
+
+            // crea il markup
+            const markup = `
+                <div class="card">
+                    <img src="./assets/img/pin.svg" class="pin" alt="">
+                    <div class="card-img">
+
+                        <!-- lorem picsum? -->
+                        <img src="${url}" alt="foto casuale">
+                    </div>
+
+                    <!-- desc significa description -->
+                    <div class="card-desc">
+                        <p>
+                            ${title}
+                        </p>
+                    </div>
+                </div>`
+
+            // appendilo all'elemento giusto (.row)
+
+            // stampalo
+        })
+
+    })
+    .catch(err => console.error(err))
