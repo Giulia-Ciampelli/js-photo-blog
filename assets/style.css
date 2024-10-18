@@ -67,6 +67,7 @@ main {
 
                 p {
                     font-size: large;
+                    text-transform: capitalize;
                 }
             }
         }
