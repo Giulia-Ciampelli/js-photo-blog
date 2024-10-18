@@ -72,7 +72,7 @@ main {
         }
 
         .card:hover {
-            transform: rotate(20deg);
+            transform: rotate(15deg);
             scale: 1.05;
             z-index: 1;
 
