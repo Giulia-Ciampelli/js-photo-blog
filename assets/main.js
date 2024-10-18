@@ -14,21 +14,27 @@ console.log('im alive');
 
 // si possono sfruttare title: (su card img) e url: (su card desc)
 
-// chiamata test
+// #region variabili
+let rowElement = document.querySelector('.row');
+console.log(rowElement);
+
+// #endregion variabili
+
+// chiamata
 axios.get("https://jsonplaceholder.typicode.com/photos?_limit=6")
 .then (response => {
     console.log(response.data);
+    
+    // la chiamata dà direttamente 6 post, niente loop for
+    
+    // foreach? per ciascun post
+    
+    // destruttura il post per trovare le proprietà da assegnare ai pezzi del markup
+    
+    // crea il markup
+    
+    // appendilo all'elemento giusto (.row)
+    
+    // stampalo
 })
 .catch (err => console.error(err))
-
-// la chiamata dà direttamente 6 post, niente loop for
-
-// foreach? per ciascun post
-
-// destruttura il post per trovare le proprietà da assegnare ai pezzi del markup
-
-// crea il markup
-
-// appendilo all'elemento giusto (.row)
-
-// stampalo
