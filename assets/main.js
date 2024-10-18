@@ -12,7 +12,7 @@ console.log('im alive');
 // Bonus
 // rendi la pagina responsive, in modo che su mobile e tablet le foto si dispongano man mano una sotto l’altra ed il titolo abbia una dimensione adeguata
 
-// si possono sfruttare title: (su card body) e url: (su card title)
+// si possono sfruttare title: (su card img) e url: (su card desc)
 
 // chiamata test
 axios.get("https://jsonplaceholder.typicode.com/photos?_limit=6")
@@ -20,3 +20,15 @@ axios.get("https://jsonplaceholder.typicode.com/photos?_limit=6")
     console.log(response.data);
 })
 .catch (err => console.error(err))
+
+// la chiamata dà direttamente 6 post, niente loop for
+
+// foreach? per ciascun post
+
+// destruttura il post per trovare le proprietà da assegnare ai pezzi del markup
+
+// crea il markup
+
+// appendilo all'elemento giusto (.row)
+
+// stampalo
