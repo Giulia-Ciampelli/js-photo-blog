@@ -31,7 +31,7 @@ main {
         flex-direction: row;
         justify-content: center;
         flex-wrap: wrap;
-        padding: 3rem;
+        padding: 3rem 0;
         gap: 2rem;
 
         .card {
@@ -42,14 +42,14 @@ main {
 
             img.pin {
                 position: absolute;
-                top: -7px;
+                top: -14px;
                 left: 0;
                 right: 0;
                 margin: 0 auto;
             }
 
             .card-img {
-                padding: 1.5rem 1.5rem 0 1.5rem;
+                padding: 1rem 1rem 0 1rem;
                 text-align: center;
 
                 img {
@@ -58,11 +58,20 @@ main {
             }
 
             .card-desc {
-                padding: 1.5rem;
+                padding: 1rem;
 
                 p {
                     font-size: large;
                 }
+            }
+        }
+
+        .card:hover {
+            transform: rotate(20deg);
+            z-index: 1;
+
+            img.pin {
+                display: none;
             }
         }
     }
@@ -73,12 +82,28 @@ main {
 
 /* media query tablet */
 @media screen and (max-width: 768px) {
-    
+    main {
+
+        .row {
+
+            .card {
+                width: calc((100% /12) * 4);
+            }
+        }
+    }
 }
 
 /* media query phone */
 @media screen and (max-width: 425px) {
-    
+    main {
+
+        .row {
+
+            .card {
+                width: 60%;
+            }
+        }
+    }
 }
 
 /* #endregion media query */
