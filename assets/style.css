@@ -11,6 +11,7 @@ body {
     background-size: 300px;
     background-repeat: repeat;
 }
+
 /* #endregion common */
 
 /* #region header */
@@ -21,10 +22,11 @@ header {
 
     h1 {
         text-align: center;
-        padding: 2rem 0;
-        font-size: 4rem;
+        padding: 1rem 0;
+        font-size: 5rem;
     }
 }
+
 /* #endregion header */
 
 /* #region main */
@@ -83,6 +85,7 @@ main {
         }
     }
 }
+
 /* #endregion main */
 
 /* #region media query */
@@ -102,6 +105,15 @@ main {
 
 /* media query phone */
 @media screen and (max-width: 425px) {
+
+    header {
+
+        h1 {
+            padding: 1rem;
+            font-size: 4.5rem;
+        }
+    }
+
     main {
 
         .row {
