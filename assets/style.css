@@ -68,3 +68,17 @@ main {
     }
 }
 /* #endregion main */
+
+/* #region media query */
+
+/* media query tablet */
+@media screen and (max-width: 768px) {
+    
+}
+
+/* media query phone */
+@media screen and (max-width: 425px) {
+    
+}
+
+/* #endregion media query */

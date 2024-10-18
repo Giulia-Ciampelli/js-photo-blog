@@ -25,11 +25,19 @@ axios.get("https://jsonplaceholder.typicode.com/photos?_limit=6")
     .then(response => {
         let cards = response.data;
 
+        
         cards.forEach(card => {
-
+            
             // destrutturazione card
             const { title, url } = card;
             console.log(card);
+            
+            // // formattazione title
+            // const formatTitle = cards.map(title => {
+            //     let initial = title[0].toUpperCase();
+            //     let rest = title.substring(1).toLowerCase();
+            //     return initial + rest;
+            // })
 
             // creazione markup
             const markup = `
