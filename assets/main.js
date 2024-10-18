@@ -23,18 +23,22 @@ console.log(rowElement);
 // chiamata
 axios.get("https://jsonplaceholder.typicode.com/photos?_limit=6")
 .then (response => {
-    console.log(response.data);
+    let cards = response.data;
+    console.log(cards);
     
-    // la chiamata dà direttamente 6 post, niente loop for
+    // assicurati di svuotare gli elementi all'inizio
     
     // foreach? per ciascun post
-    
-    // destruttura il post per trovare le proprietà da assegnare ai pezzi del markup
-    
-    // crea il markup
-    
-    // appendilo all'elemento giusto (.row)
-    
-    // stampalo
+    cards.forEach (card => {
+        
+        // destruttura il post per trovare le proprietà da assegnare ai pezzi del markup
+        
+        // crea il markup
+        
+        // appendilo all'elemento giusto (.row)
+        
+        // stampalo
+    })
+
 })
 .catch (err => console.error(err))
