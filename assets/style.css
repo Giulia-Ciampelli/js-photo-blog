@@ -25,5 +25,25 @@ main {
     
     /* RICORDA: dopo potrebbe non aver senso */
     height: 100vh;
+
+    .row {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+
+        .card {
+            background-color: #ffffff;
+            width: calc((100% /12) * 4);
+
+            .card-title {
+                
+                img {
+                    width: 90%;
+                }
+            }
+        }
+    }
 }
 /* #endregion main */
