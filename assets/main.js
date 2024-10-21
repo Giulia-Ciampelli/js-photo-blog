@@ -13,6 +13,8 @@
 // #region variabili
 let rowElement = document.querySelector('.row');
 let cardElements = '';
+let closeElement = document.getElementById('close'); // bottone di chiusura
+let overlayElement = document.querySelector('.overlay');
 
 // #endregion variabili
 
@@ -55,10 +57,15 @@ axios.get("https://jsonplaceholder.typicode.com/photos?_limit=6")
 
 // attacca event listener al bottone e foto?
 
+// event listener foto:
+// togli classe d-none all'overlay
+// destruttura card?
+// associa img all'img dell'overlay (sostituisci lorem picsum a img della card)
+
 // event listener bottone:
     // metti classe d-none
 
-// event listener foto:
-    // togli classe d-none all'overlay
-    // destruttura card?
-    // associa img all'img dell'overlay (sostituisci lorem picsum a img della card)
+closeElement.addEventListener('click', ()=>{
+    const overlay = overlayElement.classList;
+    overlay.toggle('d-none');
+})

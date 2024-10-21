@@ -35,7 +35,7 @@ body {
         padding: 2rem 0;
         text-align: center;
 
-        .close {
+        .btn {
             padding: .25rem .5rem;
             font-size: large;
             font-family: Arial, Helvetica, sans-serif;
