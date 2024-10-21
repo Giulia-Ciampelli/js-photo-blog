@@ -15,10 +15,9 @@ let rowElement = document.querySelector('.row');
 let cardElements = '';
 let closeElement = document.getElementById('close'); // bottone di chiusura
 let overlayElement = document.querySelector('.overlay');
+let imgContElement = document.querySelector('.image');
 
-// seleziona solo il lorem picsum e non l'immagine del markup, se seleziono via id unico mi dà null, come fare?
-
-// let closingArray = [document.querySelectorAll('.close')];
+// DOPO: fai refactoring e aggiungi una funzione per cambiare le classi
 
 // #endregion variabili
 
@@ -54,38 +53,32 @@ axios.get("https://jsonplaceholder.typicode.com/photos?_limit=6")
             cardElements += markup;
             rowElement.innerHTML = cardElements;
         })
-        
+
         // event listener qui?
         let imgElements = document.querySelectorAll('.api-img');
-        
+
         imgElements.forEach(img => {
+
+            // destrutturazione card
+            const { url } = img;
+
+            // creazione markup
+            const markup = `<img src="${url}" alt="">`
+            console.log(url);
             
+            // associa img all'img dell'overlay (sostituisci lorem picsum a img della card)
+            imgElements += markup;
+            imgContElement.innerHTML = imgElements;
+
             img.addEventListener('click', () => {
-                console.log('test');
+                const overlay = overlayElement.classList;
+                overlay.toggle('d-none');
             })
         })
     })
     .catch(err => console.error(err))
 
-
-// attacca event listener al bottone e foto?
-
-
-
-
-// event listener foto:
-// togli classe d-none all'overlay
-// destruttura card?
-// associa img all'img dell'overlay (sostituisci lorem picsum a img della card)
-
 // event listener bottone:
-// metti classe d-none
-
-// closeElement.addEventListener('click', () => {
-//     const overlay = overlayElement.classList;
-//     overlay.toggle('d-none');
-// })
-
 closeElement.addEventListener('click', () => {
     const overlay = overlayElement.classList;
     overlay.toggle('d-none');
