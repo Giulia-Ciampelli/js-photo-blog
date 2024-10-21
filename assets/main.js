@@ -17,9 +17,15 @@ let closeElement = document.getElementById('close'); // bottone di chiusura
 let overlayElement = document.querySelector('.overlay');
 let imgContElement = document.querySelector('.image');
 
-// DOPO: fai refactoring e aggiungi una funzione per cambiare le classi
-
 // #endregion variabili
+
+// funzione bottone
+function buttonClassToggle(element) {
+    element.addEventListener('click', () => {
+        const overlay = overlayElement.classList;
+        overlay.toggle('d-none');
+    })
+}
 
 // chiamata
 axios.get("https://jsonplaceholder.typicode.com/photos?_limit=6")
@@ -73,22 +79,11 @@ axios.get("https://jsonplaceholder.typicode.com/photos?_limit=6")
             imgElements += markup;
             imgContElement.innerHTML = imgElements;
 
-            img.addEventListener('click', () => {
-                const overlay = overlayElement.classList;
-                overlay.toggle('d-none');
-            })
+            // richiamo funzione
+            buttonClassToggle(img);
         })
     })
     .catch(err => console.error(err))
 
 // event listener bottone:
-closeElement.addEventListener('click', () => {
-    const overlay = overlayElement.classList;
-    overlay.toggle('d-none');
-})
-
-// ora non funziona più col bottone, come farle funzionare entrambe?
-
-// fai prima una funzione?
-
-// foreach?
+buttonClassToggle(closeElement);
