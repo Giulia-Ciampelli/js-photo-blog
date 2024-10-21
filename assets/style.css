@@ -114,6 +114,7 @@ main {
             scale: 1.05;
             box-shadow: #363636 2px 4px 16px;
             z-index: 1;
+            cursor: pointer;
 
             img.pin {
                 display: none;

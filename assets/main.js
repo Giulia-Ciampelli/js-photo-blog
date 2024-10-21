@@ -15,6 +15,8 @@ let rowElement = document.querySelector('.row');
 let cardElements = '';
 let closeElement = document.getElementById('close'); // bottone di chiusura
 let overlayElement = document.querySelector('.overlay');
+let photoElement = document.getElementById('photo');
+// let closingArray = [document.querySelectorAll('.close')];
 
 // #endregion variabili
 
@@ -24,7 +26,7 @@ axios.get("https://jsonplaceholder.typicode.com/photos?_limit=6")
         let cards = response.data;
 
         cards.forEach(card => {
-            
+
             // destrutturazione card
             const { title, url } = card;
 
@@ -35,7 +37,7 @@ axios.get("https://jsonplaceholder.typicode.com/photos?_limit=6")
                     <div class="card-img">
 
                         <!-- lorem picsum? -->
-                        <img src="${url}" alt="foto casuale">
+                        <img src="${url}" id="photo" alt="foto casuale">
                     </div>
 
                     <!-- desc significa description -->
@@ -62,17 +64,26 @@ axios.get("https://jsonplaceholder.typicode.com/photos?_limit=6")
 // destruttura card?
 // associa img all'img dell'overlay (sostituisci lorem picsum a img della card)
 
-// event listener bottone:
-    // metti classe d-none
-
-closeElement.addEventListener('click', ()=>{
+photoElement.addEventListener('click', () => {
     const overlay = overlayElement.classList;
-    overlay.toggle('d-none');
+    overlay.add('d-none');
 })
 
-overlayElement.addEventListener('click', ()=>{
+// event listener bottone:
+// metti classe d-none
+
+// closeElement.addEventListener('click', () => {
+//     const overlay = overlayElement.classList;
+//     overlay.toggle('d-none');
+// })
+
+closeElement.addEventListener('click', () => {
     const overlay = overlayElement.classList;
     overlay.toggle('d-none');
 })
 
 // ora non funziona più col bottone, come farle funzionare entrambe?
+
+// fai prima una funzione?
+
+// foreach?
