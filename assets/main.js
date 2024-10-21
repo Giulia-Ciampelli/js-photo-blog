@@ -51,3 +51,14 @@ axios.get("https://jsonplaceholder.typicode.com/photos?_limit=6")
 
     })
     .catch(err => console.error(err))
+
+
+// attacca event listener al bottone e foto?
+
+// event listener bottone:
+    // metti classe d-none
+
+// event listener foto:
+    // togli classe d-none all'overlay
+    // destruttura card?
+    // associa img all'img dell'overlay (sostituisci lorem picsum a img della card)
