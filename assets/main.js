@@ -60,12 +60,14 @@ axios.get("https://jsonplaceholder.typicode.com/photos?_limit=6")
         imgElements.forEach(img => {
 
             // destrutturazione card
-            const { albumId, id, title, url, thumbUrl } = img;
+            // const { url } = img;
             console.log(img.src);
+            
+            // perchè url dà undefined?
 
             // creazione markup
+            // const markup = `<img src="${url}" alt="">`
             const markup = `<img src="${img.src}" alt="">`
-            console.log(thumbUrl);
             
             // associa img all'img dell'overlay (sostituisci lorem picsum a img della card)
             imgElements += markup;
