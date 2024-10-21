@@ -69,3 +69,10 @@ closeElement.addEventListener('click', ()=>{
     const overlay = overlayElement.classList;
     overlay.toggle('d-none');
 })
+
+overlayElement.addEventListener('click', ()=>{
+    const overlay = overlayElement.classList;
+    overlay.toggle('d-none');
+})
+
+// ora non funziona più col bottone, come farle funzionare entrambe?
