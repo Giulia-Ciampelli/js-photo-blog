@@ -1,3 +1,15 @@
+// Milestone 1
+// Facciamo in modo di creare un overlay che copra l’intera pagina e all’interno, centrata, disponiamo un’immagine qualunque ed un button di chiusura.
+// Milestone 2
+// Facciamo sparire l’overlay con l’aiuto di una classe CSS che imposti il display: none .
+// Dopodichè facciamo sì che cliccando una qualunque foto. L’overlay ricompaia.
+// Cliccando invece il button di chiusura, l’overlay scompare nuovamente.
+// Milestone 3
+// Inseriamo il pezzo di logica finale: quando una foto viene cliccata, dobbiamo fare in modo che sia proprio quella foto a essere mostrata all’interno dell’overlay.
+// Ci sono diversi modi di farlo, prova a sperimentare :slightly_smiling_face:
+// Bonus
+// Spostandosi col mouse sopra le foto, il mouse diventa un puntatore, per far capire all’utente che può cliccare
+
 // #region variabili
 let rowElement = document.querySelector('.row');
 let cardElements = '';
