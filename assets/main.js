@@ -60,11 +60,12 @@ axios.get("https://jsonplaceholder.typicode.com/photos?_limit=6")
         imgElements.forEach(img => {
 
             // destrutturazione card
-            const { url } = img;
+            const { albumId, id, title, url, thumbUrl } = img;
+            console.log(img.src);
 
             // creazione markup
-            const markup = `<img src="${url}" alt="">`
-            console.log(url);
+            const markup = `<img src="${img.src}" alt="">`
+            console.log(thumbUrl);
             
             // associa img all'img dell'overlay (sostituisci lorem picsum a img della card)
             imgElements += markup;
