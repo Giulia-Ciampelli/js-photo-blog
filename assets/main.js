@@ -10,20 +10,19 @@ let imgContElement = document.querySelector('.image');
 // funzione bottone
 function buttonClassToggle(element, url) {
     element.addEventListener('click', () => {
-        
+
         if (url) {
             imgContElement.innerHTML = `<img src="${url}" alt="">`
         }
-
-        const overlay = overlayElement.classList;
-        overlay.toggle('d-none');
+        
+        overlayElement.classList.toggle('d-none');
     })
 }
 
 // chiamata
 axios.get("https://jsonplaceholder.typicode.com/photos?_limit=6")
     .then(response => {
-        
+
         // creazione cards
         let cards = response.data;
 
