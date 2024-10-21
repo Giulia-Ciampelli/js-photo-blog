@@ -45,7 +45,7 @@ main {
             width: calc((100% /12) * 3);
             position: relative;
             box-shadow: #363636 2px 4px 8px;
-            transition: transform 1s, scale 1s;
+            transition: transform 1s, scale 1s, shadow 1s;
 
             img.pin {
                 position: absolute;
@@ -75,8 +75,9 @@ main {
         }
 
         .card:hover {
-            transform: rotate(15deg);
+            transform: rotate(10deg);
             scale: 1.05;
+            box-shadow: #363636 2px 4px 16px;
             z-index: 1;
 
             img.pin {
