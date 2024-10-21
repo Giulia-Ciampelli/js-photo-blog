@@ -20,8 +20,13 @@ let imgContElement = document.querySelector('.image');
 // #endregion variabili
 
 // funzione bottone
-function buttonClassToggle(element) {
+function buttonClassToggle(element, url) {
     element.addEventListener('click', () => {
+        
+        if (url) {
+            imgContElement.innerHTML = `<img src="${url}" alt="">`
+        }
+
         const overlay = overlayElement.classList;
         overlay.toggle('d-none');
     })
@@ -73,14 +78,14 @@ axios.get("https://jsonplaceholder.typicode.com/photos?_limit=6")
 
             // creazione markup
             // const markup = `<img src="${url}" alt="">`
-            const markup = `<img src="${img.src}" alt="">`
+            // const markup = `<img src="${img.src}" alt="">`
             
             // associa img all'img dell'overlay (sostituisci lorem picsum a img della card)
-            imgElements += markup;
-            imgContElement.innerHTML = imgElements;
+            // imgElements += markup;
+            // imgContElement.innerHTML = imgElements;
 
             // richiamo funzione
-            buttonClassToggle(img);
+            buttonClassToggle(img, img.src);
         })
     })
     .catch(err => console.error(err))
