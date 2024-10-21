@@ -15,7 +15,9 @@ let rowElement = document.querySelector('.row');
 let cardElements = '';
 let closeElement = document.getElementById('close'); // bottone di chiusura
 let overlayElement = document.querySelector('.overlay');
-let photoElement = document.getElementById('photo');
+
+// seleziona solo il lorem picsum e non l'immagine del markup, se seleziono via id unico mi dà null, come fare?
+
 // let closingArray = [document.querySelectorAll('.close')];
 
 // #endregion variabili
@@ -37,7 +39,7 @@ axios.get("https://jsonplaceholder.typicode.com/photos?_limit=6")
                     <div class="card-img">
 
                         <!-- lorem picsum? -->
-                        <img src="${url}" id="photo" alt="foto casuale">
+                        <img src="${url}" class="api-img" alt="foto casuale">
                     </div>
 
                     <!-- desc significa description -->
@@ -52,22 +54,29 @@ axios.get("https://jsonplaceholder.typicode.com/photos?_limit=6")
             cardElements += markup;
             rowElement.innerHTML = cardElements;
         })
-
+        
+        // event listener qui?
+        let imgElements = document.querySelectorAll('.api-img');
+        
+        imgElements.forEach(img => {
+            
+            img.addEventListener('click', () => {
+                console.log('test');
+            })
+        })
     })
     .catch(err => console.error(err))
 
 
 // attacca event listener al bottone e foto?
 
+
+
+
 // event listener foto:
 // togli classe d-none all'overlay
 // destruttura card?
 // associa img all'img dell'overlay (sostituisci lorem picsum a img della card)
-
-photoElement.addEventListener('click', () => {
-    const overlay = overlayElement.classList;
-    overlay.add('d-none');
-})
 
 // event listener bottone:
 // metti classe d-none
