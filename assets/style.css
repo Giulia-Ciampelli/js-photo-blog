@@ -129,12 +129,25 @@ main {
 
 /* media query tablet */
 @media screen and (max-width: 768px) {
-    main {
+    body {
 
-        .row {
+        .overlay {
 
-            .card {
-                width: calc((100% /12) * 4);
+            .image {
+
+                img {
+                    width: 80%;
+                }
+            }
+        }
+
+        main {
+
+            .row {
+
+                .card {
+                    width: calc((100% /12) * 4);
+                }
             }
         }
     }
@@ -143,20 +156,33 @@ main {
 /* media query phone */
 @media screen and (max-width: 425px) {
 
-    header {
+    body {
 
-        h1 {
-            padding: 1rem;
-            font-size: 4.5rem;
+        .overlay {
+
+            .image {
+
+                img {
+                    width: 80%;
+                }
+            }
         }
-    }
 
-    main {
+        header {
 
-        .row {
+            h1 {
+                padding: 1rem;
+                font-size: 4.5rem;
+            }
+        }
 
-            .card {
-                width: 60%;
+        main {
+
+            .row {
+
+                .card {
+                    width: 60%;
+                }
             }
         }
     }
