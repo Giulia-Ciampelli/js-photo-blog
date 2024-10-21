@@ -5,7 +5,7 @@ let closeElement = document.getElementById('close'); // bottone di chiusura
 let overlayElement = document.querySelector('.overlay');
 let imgContElement = document.querySelector('.image');
 
-// #endregion variabili
+// #endregion variabili globali
 
 // funzione bottone
 function buttonClassToggle(element, url) {
